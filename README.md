@@ -1,7 +1,7 @@
 # 概要
 サンプルでJavaソースコード、テストコードがあります。  
-また後述する `mvn site` で[Checkstyle,jUnit4,Javadoc,FindBugs]のレポート出力が可能です。  
-Javaソースコード、テストコードは[Checkstyle,jUnit4,Javadoc,FindBugs]を出力するためのサンプルです。不要ですので削除してください。
+また後述する `mvn clean jacoco:prepare-agent site jacoco:report` で[Checkstyle,jUnit4,Javadoc,FindBugs,jacoco(Coverage)]のレポート出力が可能です。  
+Javaソースコード、テストコードは[Checkstyle,jUnit4,Javadoc,FindBugs,jacoco]を出力するためのサンプルです。不要ですので削除してください。
 
 # 検証環境
 
@@ -27,7 +27,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.65-b01, mixed mode)
 # 本Projectを作成した手順
 1. eclipse > 新規MavenProject
 1. JavaBuildPath > Libraries > Junit4を追加
-1. pom.xmlに[Checkstyle,jUnit4,Javadoc,FindBugs]追加。
+1. pom.xmlに[Checkstyle,jUnit4,Javadoc,FindBugs,jacoco]追加。
 1. [ルート/]config/checkstyle.xml 追加。
 1. gitignore追加
 
@@ -40,3 +40,4 @@ pom.xml のある階層で `mvn site` の実行で以下のレポート出力が
 	1. Javadoc
 	1. Test Javadoc
 	1. FindBugs
+	1. jacoco

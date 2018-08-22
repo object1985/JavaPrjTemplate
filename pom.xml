@@ -80,6 +80,11 @@
 				<artifactId>maven-site-plugin</artifactId>
 				<version>3.7.1</version>
 			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.0</version>
+			</plugin>
 		</plugins>
 	</build>
 	<reporting>
@@ -123,6 +128,18 @@
 							<report>index</report>
 							<report>licenses</report>
 							<report>dependency-info</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<!-- select non-aggregate reports -->
+							<report>report</report>
 						</reports>
 					</reportSet>
 				</reportSets>
