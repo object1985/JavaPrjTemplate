@@ -16,7 +16,7 @@ public class Caluculator {
 	 */
 	public int add(int x,int y){
 		try{
-			String muimi = "";
+			String muimi = "";	//無意味変数あり。findbugで検出されるか？
 			List<String> list = new ArrayList<>();
 			list.removeAll(list);
 		}catch (Exception e) {
@@ -32,7 +32,7 @@ public class Caluculator {
 	 * @return 引数の合計。
 	 */
 	public int add2(int x,int y){
-		//TODO 未使用変数あり。これがcheckstyleに引っかかるか？
+		//TODO 未使用変数あり。これがfindbugに引っかかるか？
 		int mudanahensuu = 0;
 		return x + y;
 	}
